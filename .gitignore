@@ -11,3 +11,7 @@ bin
 .project*
 .classpath
 .idea/
+
+#Ignore mac os .DS_Store
+.DS_Store
+
