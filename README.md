@@ -10,3 +10,5 @@
 ```sh
 run-dist:
 ```
+### Asciinema resord
+[press here to view Asciinema record](https://asciinema.org/a/qZgIAZnS7FzhcscFANUHVM35c)
