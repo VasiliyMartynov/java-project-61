@@ -82,4 +82,7 @@ public class Engine {
     public static int getRandomNumberFromRange(int minRandomNumber, int maxRandomNumber) {
         return (int) ((Math.random() * (maxRandomNumber - minRandomNumber)) + minRandomNumber);
     }
+    public static int getRandomNumberFromRange() {
+        return (int) ((Math.random() * (MAX_RANDOM_NUMBER - MIN_RANDOM_NUMBER)) + MIN_RANDOM_NUMBER);
+    }
 }

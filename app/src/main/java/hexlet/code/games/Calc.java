@@ -8,8 +8,8 @@ public class Calc {
     public static String[][] setGameData() { //[0] - question, [length-1] - answer
         String[][] gameData = new String[Engine.NUMBERS_OF_GAMES][2];
         for (int i = 0; i < gameData.length; i++) {
-            int randomNumber1 = Engine.getRandomNumberFromRange(Engine.MIN_RANDOM_NUMBER, Engine.MAX_RANDOM_NUMBER);
-            int randomNumber2 = Engine.getRandomNumberFromRange(Engine.MIN_RANDOM_NUMBER, Engine.MAX_RANDOM_NUMBER);
+            int randomNumber1 = Engine.getRandomNumberFromRange();
+            int randomNumber2 = Engine.getRandomNumberFromRange();
             var answer = "";
             Random r = new Random();
             String operations = "*+-";
