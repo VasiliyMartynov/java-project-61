@@ -1,7 +1,7 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
+import java.util.Random;
 public class Calc {
-    private static final int MAX_OPERATIONS = 3;
     public static void rules() {
         System.out.println("What is the result of the expression?");
     }
@@ -10,26 +10,24 @@ public class Calc {
         for (int i = 0; i < gameData.length; i++) {
             int randomNumber1 = Engine.getRandomNumberFromRange(Engine.MIN_RANDOM_NUMBER, Engine.MAX_RANDOM_NUMBER);
             int randomNumber2 = Engine.getRandomNumberFromRange(Engine.MIN_RANDOM_NUMBER, Engine.MAX_RANDOM_NUMBER);
-            int randomOperation = Engine.getRandomNumberFromRange(Engine.MIN_RANDOM_NUMBER, MAX_OPERATIONS);
-            var question = "";
             var answer = "";
+            Random r = new Random();
+            String operations = "*+-";
+            char randomOperation = operations.charAt(r.nextInt(operations.length()));
             switch (randomOperation) {
-                case 1: // *
-                    question = randomNumber1 + " * " + randomNumber2;
+                case '*':
                     answer = Integer.toString(randomNumber1 * randomNumber2);
                     break;
-                case 2: // +
-                    question = randomNumber1 + " + " + randomNumber2;
+                case '+':
                     answer = Integer.toString(randomNumber1 + randomNumber2);
                     break;
-                case 3: // -
-                    question = randomNumber1 + " - " + randomNumber2;
+                case '-':
                     answer = Integer.toString(randomNumber1 - randomNumber2);
                     break;
                 default:
                     break;
             }
-            gameData[i][0] = question;
+            gameData[i][0] = randomNumber1 + " " + String.valueOf(randomOperation) + " " + randomNumber2;
             gameData[i][1] = answer;
         }
         return gameData;
