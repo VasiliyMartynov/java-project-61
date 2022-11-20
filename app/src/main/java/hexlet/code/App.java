@@ -1,14 +1,15 @@
 package hexlet.code;
 import java.util.Scanner;
 public class App {
-    public static String[] menuItems = {
+    private static String[] menuItems = {
         "1 - Greet", "2 - Even", "3 - Calc", "4 - GCD", "5 - Progression", "6 - Prime", "0 - Exit"};
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         showMenu();
         int userChoice = scanner.nextInt();
         if (userChoice == 0) {
-            Engine.startGame(menuItems[6]);
+            int exitCode = 6;
+            Engine.startGame(menuItems[exitCode]);
         } else {
             Engine.startGame(menuItems[userChoice - 1]);
         }
