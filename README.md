@@ -10,5 +10,7 @@
 ```sh
 run-dist:
 ```
-### Asciinema resord
-[press here to view Asciinema record](https://asciinema.org/a/qZgIAZnS7FzhcscFANUHVM35c)
+### Asciinema resords
+[Even](https://asciinema.org/a/qZgIAZnS7FzhcscFANUHVM35c)
+
+[Calc](https://asciinema.org/a/qJp8Lb4zppEbZECpnAIbmlPYm)
