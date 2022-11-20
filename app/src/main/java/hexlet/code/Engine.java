@@ -58,7 +58,7 @@ public class Engine {
             } else {
                 System.out.print("'" + userAnswer + "'" + " is wrong answer ;(. ");
                 System.out.println("Correct answer was " + "'" + gameData[i][gameData[i].length - 1] + "'" + ".");
-                System.out.println("Let's try again, " + userName);
+                System.out.println("Let's try again, " + userName + "!");
                 break;
             }
         }
