@@ -1,6 +1,7 @@
 package hexlet.code;
 import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
+import hexlet.code.games.GCD;
 import java.util.Scanner;
 public class Engine {
     public static final int NUMBERSOFGAMES = 3;
@@ -29,6 +30,10 @@ public class Engine {
                 Calc.rules();
                 gameData = Calc.setGameData(); //[0] - question, [length-1] - answer
                 break;
+            case 4:
+                GCD.rules();
+                gameData = GCD.setGameData(); //[0] - question, [length-1] - answer
+                break;
             default:
                 break;
         }
@@ -41,21 +46,18 @@ public class Engine {
                 System.out.println("Correct!");
                 countOfCorrectAnswers++;
             } else {
-                System.out.print(userAnswer + " is wrong answer ;(. ");
-                System.out.println("Correct answer was " + gameData[i][gameData[i].length - 1] + ".");
+                System.out.print("'" + userAnswer + "'" + " is wrong answer ;(. ");
+                System.out.println("Correct answer was " + "'" + gameData[i][gameData[i].length - 1] + "'" + ".");
                 System.out.println("Let's try again, " + userName);
                 break;
             }
-
         }
         if (countOfCorrectAnswers == 3) {
             System.out.println("Congratulations, " + userName + "!");
         }
-
     }
     ///////////
     public static int getRandomNumberFromRange(int minRandomNumber, int maxRandomNumber) {
         return (int) ((Math.random() * (maxRandomNumber - minRandomNumber)) + minRandomNumber);
     }
-
 }

@@ -12,21 +12,24 @@ public class App {
                     Engine.gretings();
                     break;
                 case 2:
-                    Engine.startGame(2); //Even
+                    Engine.startGame(userChoice); //Even
                     break;
                 case 3:
-                    Engine.startGame(3); //Calc
+                    Engine.startGame(userChoice); //Calc
+                    break;
+                case 4:
+                    Engine.startGame(userChoice); //Calc
                     break;
                 case 0:
                     System.exit(0);
                 default:
-                    showMenu();
+                    break;
             }
         }
     }
     public static void showMenu() {
         System.out.println("Please enter the game number and press Enter.");
-        String[] menuItems = {"1 - Greet", "2 - Even", "3 - Calc", "0 - Exit"};
+        String[] menuItems = {"1 - Greet", "2 - Even", "3 - Calc", "4 - GCD", "0 - Exit"};
         for (int item = 0; item < menuItems.length; item++) {
             System.out.println(menuItems[item]);
         }

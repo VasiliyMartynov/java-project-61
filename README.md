@@ -14,3 +14,5 @@ run-dist:
 [Even](https://asciinema.org/a/qZgIAZnS7FzhcscFANUHVM35c)
 
 [Calc](https://asciinema.org/a/qJp8Lb4zppEbZECpnAIbmlPYm)
+
+[GCD](https://asciinema.org/a/YzfiwzzNFrFuFFmIE6iE5tjbA)
