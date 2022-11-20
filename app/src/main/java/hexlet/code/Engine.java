@@ -3,6 +3,8 @@ import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
+
 
 import java.util.Scanner;
 public class Engine {
@@ -10,7 +12,6 @@ public class Engine {
     static String userName = "";
     static int countOfCorrectAnswers = 0;
     static String[][] gameData = {};
-    ///////////
     public static void gretings() {
         Scanner sc = new Scanner(System.in);
         System.out.println("\nWelcome to the Brain Games!");
@@ -18,7 +19,6 @@ public class Engine {
         userName = sc.next();
         System.out.println("Hello, " + userName + "!");
     }
-    ///////////
     public static void startGame(int game) {
         Scanner scanner = new Scanner(System.in);
         String userAnswer;
@@ -39,6 +39,10 @@ public class Engine {
             case 5:
                 Progression.rules();
                 gameData = Progression.setGameData(); //[0] - question, [length-1] - answer
+                break;
+            case 6:
+                Prime.rules();
+                gameData = Prime.setGameData(); //[0] - question, [length-1] - answer
                 break;
             default:
                 break;
@@ -62,7 +66,6 @@ public class Engine {
             System.out.println("Congratulations, " + userName + "!");
         }
     }
-    ///////////
     public static int getRandomNumberFromRange(int minRandomNumber, int maxRandomNumber) {
         return (int) ((Math.random() * (maxRandomNumber - minRandomNumber)) + minRandomNumber);
     }

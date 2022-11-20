@@ -18,3 +18,5 @@ run-dist:
 [GCD](https://asciinema.org/a/YzfiwzzNFrFuFFmIE6iE5tjbA)
 
 [Progression](https://asciinema.org/a/iwMGD8nLVL23KBaawq39wK1c4)
+
+[Prime](https://asciinema.org/a/wMTz8XKS2rC38IsIUEZAAFk9x)
