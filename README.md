@@ -16,3 +16,5 @@ run-dist:
 [Calc](https://asciinema.org/a/qJp8Lb4zppEbZECpnAIbmlPYm)
 
 [GCD](https://asciinema.org/a/YzfiwzzNFrFuFFmIE6iE5tjbA)
+
+[Progression](https://asciinema.org/a/iwMGD8nLVL23KBaawq39wK1c4)

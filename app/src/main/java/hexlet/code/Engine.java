@@ -2,6 +2,8 @@ package hexlet.code;
 import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
+
 import java.util.Scanner;
 public class Engine {
     public static final int NUMBERSOFGAMES = 3;
@@ -33,6 +35,10 @@ public class Engine {
             case 4:
                 GCD.rules();
                 gameData = GCD.setGameData(); //[0] - question, [length-1] - answer
+                break;
+            case 5:
+                Progression.rules();
+                gameData = Progression.setGameData(); //[0] - question, [length-1] - answer
                 break;
             default:
                 break;

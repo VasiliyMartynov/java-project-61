@@ -1,6 +1,5 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
-
 public class Calc {
     public static void rules() {
         System.out.println("What is the result of the expression?");
@@ -9,7 +8,6 @@ public class Calc {
         var maxRandomNumber = 100;
         var minRandomNumber = 1;
         var maxOperations = 3;
-
         String[][] gameData = new String[Engine.NUMBERSOFGAMES][2];
         for (int i = 0; i < gameData.length; i++) {
             int randomNumber1 = Engine.getRandomNumberFromRange(minRandomNumber, maxRandomNumber);

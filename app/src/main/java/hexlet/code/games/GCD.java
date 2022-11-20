@@ -9,8 +9,6 @@ public class GCD {
     public static String[][] setGameData() { //[0] - question, [length-1] - answer
         var maxRandomNumber = 100;
         var minRandomNumber = 1;
-        var maxOperations = 3;
-
         String[][] gameData = new String[Engine.NUMBERSOFGAMES][2];
         for (int i = 0; i < gameData.length; i++) {
             int randomNumber1 = Engine.getRandomNumberFromRange(minRandomNumber, maxRandomNumber);

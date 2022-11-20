@@ -20,6 +20,9 @@ public class App {
                 case 4:
                     Engine.startGame(userChoice); //Calc
                     break;
+                case 5:
+                    Engine.startGame(userChoice); //Calc
+                    break;
                 case 0:
                     System.exit(0);
                 default:
@@ -29,7 +32,7 @@ public class App {
     }
     public static void showMenu() {
         System.out.println("Please enter the game number and press Enter.");
-        String[] menuItems = {"1 - Greet", "2 - Even", "3 - Calc", "4 - GCD", "0 - Exit"};
+        String[] menuItems = {"1 - Greet", "2 - Even", "3 - Calc", "4 - GCD", "5 - Progression", "0 - Exit"};
         for (int item = 0; item < menuItems.length; item++) {
             System.out.println(menuItems[item]);
         }
