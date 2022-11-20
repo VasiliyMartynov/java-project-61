@@ -8,7 +8,7 @@ public class Progression {
         String[][] gameData = new String[Engine.NUMBERSOFGAMES][2];
         for (int i = 0; i < gameData.length; i++) {
             int[] progression = getRandomProgression();
-            int randomProgressionIndex = Engine.getRandomNumberFromRange(0, progression.length);
+            int randomProgressionIndex = Engine.getRandomNumberFromRange(1, progression.length - 2);
             gameData[i][0] = getQuestion(progression, randomProgressionIndex);
             gameData[i][1] = Integer.toString(progression[randomProgressionIndex]);
         }
