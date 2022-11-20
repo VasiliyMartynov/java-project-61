@@ -72,6 +72,9 @@ public class Engine {
                 Prime.rules();
                 gameData = Prime.setGameData();
                 break;
+            case "0 - Exit":
+                System.exit(0);
+                break;
             default:
                 break;
         }
