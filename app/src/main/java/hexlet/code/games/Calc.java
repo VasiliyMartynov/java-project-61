@@ -1,18 +1,16 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
 public class Calc {
+    private static final int MAX_OPERATIONS = 3;
     public static void rules() {
         System.out.println("What is the result of the expression?");
     }
     public static String[][] setGameData() { //[0] - question, [length-1] - answer
-        var maxRandomNumber = 100;
-        var minRandomNumber = 1;
-        var maxOperations = 3;
-        String[][] gameData = new String[Engine.NUMBERSOFGAMES][2];
+        String[][] gameData = new String[Engine.NUMBERS_OF_GAMES][2];
         for (int i = 0; i < gameData.length; i++) {
-            int randomNumber1 = Engine.getRandomNumberFromRange(minRandomNumber, maxRandomNumber);
-            int randomNumber2 = Engine.getRandomNumberFromRange(minRandomNumber, maxRandomNumber);
-            int randomOperation = Engine.getRandomNumberFromRange(minRandomNumber, maxOperations);
+            int randomNumber1 = Engine.getRandomNumberFromRange(Engine.MIN_RANDOM_NUMBER, Engine.MAX_RANDOM_NUMBER);
+            int randomNumber2 = Engine.getRandomNumberFromRange(Engine.MIN_RANDOM_NUMBER, Engine.MAX_RANDOM_NUMBER);
+            int randomOperation = Engine.getRandomNumberFromRange(Engine.MIN_RANDOM_NUMBER, MAX_OPERATIONS);
             var question = "";
             var answer = "";
             switch (randomOperation) {

@@ -1,11 +1,13 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
 public class Progression {
+    private static final int MAX_PROGRESSION_LENGTH = 10;
+    private static final int MIN_PROGRESSION_LENGTH = 6;
     public static void rules() {
         System.out.println("What number is missing in the progression?");
     }
     public static String[][] setGameData() { //[0] - question, [length-1] - answer
-        String[][] gameData = new String[Engine.NUMBERSOFGAMES][2];
+        String[][] gameData = new String[Engine.NUMBERS_OF_GAMES][2];
         for (int i = 0; i < gameData.length; i++) {
             int[] progression = getRandomProgression();
             int randomProgressionIndex = Engine.getRandomNumberFromRange(1, progression.length - 2);
@@ -15,11 +17,9 @@ public class Progression {
         return gameData;
     }
     static int[] getRandomProgression() {
-        var maxProgressionLength = 10;
-        var minProgressionLength = 6;
-        var firstItem = Engine.getRandomNumberFromRange(0, 10);
-        var stepOfProgression = Engine.getRandomNumberFromRange(1, 10);
-        int randomProgressionLength = Engine.getRandomNumberFromRange(minProgressionLength, maxProgressionLength);
+        final int firstItem = Engine.getRandomNumberFromRange(0, MAX_PROGRESSION_LENGTH);
+        var stepOfProgression = Engine.getRandomNumberFromRange(1, MAX_PROGRESSION_LENGTH);
+        int randomProgressionLength = Engine.getRandomNumberFromRange(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH);
         int[] randomProgression = new int[randomProgressionLength];
         randomProgression[0] = firstItem;
         for (int i = 0; i < randomProgressionLength - 1; i++) {
@@ -38,7 +38,6 @@ public class Progression {
             stringBuilder.append(stringProgression[i]);
             stringBuilder.append(" ");
         }
-        String joinedString = stringBuilder.toString();
-        return joinedString;
+        return stringBuilder.toString();
     }
 }

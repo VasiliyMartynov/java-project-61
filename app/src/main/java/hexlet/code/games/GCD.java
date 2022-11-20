@@ -7,12 +7,10 @@ public class GCD {
         System.out.println("Find the greatest common divisor of given numbers.");
     }
     public static String[][] setGameData() { //[0] - question, [length-1] - answer
-        var maxRandomNumber = 100;
-        var minRandomNumber = 1;
-        String[][] gameData = new String[Engine.NUMBERSOFGAMES][2];
+        String[][] gameData = new String[Engine.NUMBERS_OF_GAMES][2];
         for (int i = 0; i < gameData.length; i++) {
-            int randomNumber1 = Engine.getRandomNumberFromRange(minRandomNumber, maxRandomNumber);
-            int randomNumber2 = Engine.getRandomNumberFromRange(minRandomNumber, maxRandomNumber);
+            int randomNumber1 = Engine.getRandomNumberFromRange(Engine.MIN_RANDOM_NUMBER, Engine.MAX_RANDOM_NUMBER);
+            int randomNumber2 = Engine.getRandomNumberFromRange(Engine.MIN_RANDOM_NUMBER, Engine.MAX_RANDOM_NUMBER);
             gameData[i][0] = randomNumber1 + " " + randomNumber2;
             gameData[i][1] = Integer.toString(gcd(randomNumber1, randomNumber2));
         }

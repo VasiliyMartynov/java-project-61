@@ -7,11 +7,9 @@ public class Even {
     }
 
     public static String[][] setGameData() { //[0] - question, [length-1] - answer
-        var maxRandomNumber = 100;
-        var minRandomNumber = 1;
-        String[][] gameData = new String[Engine.NUMBERSOFGAMES][2];
+        String[][] gameData = new String[Engine.NUMBERS_OF_GAMES][2];
         for (int i = 0; i < gameData.length; i++) {
-            int randomNumber = Engine.getRandomNumberFromRange(minRandomNumber, maxRandomNumber);
+            int randomNumber = Engine.getRandomNumberFromRange(Engine.MIN_RANDOM_NUMBER, Engine.MAX_RANDOM_NUMBER);
             gameData[i][0] = String.valueOf(randomNumber);
             if (Integer.parseInt(gameData[i][0]) % 2 == 0) {
                 gameData[i][1] = "yes";

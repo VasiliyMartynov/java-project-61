@@ -5,13 +5,14 @@ import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
-
 import java.util.Scanner;
 public class Engine {
-    public static final int NUMBERSOFGAMES = 3;
-    static String userName = "";
-    static int countOfCorrectAnswers = 0;
-    static String[][] gameData = {};
+    public static final int NUMBERS_OF_GAMES = 3;
+    public static final int MAX_RANDOM_NUMBER = 100;
+    public static final int MIN_RANDOM_NUMBER = 1;
+    private static String userName = "";
+    private static int countOfCorrectAnswers = 0;
+    private static String[][] gameData = {};
     public static void gretings() {
         Scanner sc = new Scanner(System.in);
         System.out.println("\nWelcome to the Brain Games!");
@@ -62,7 +63,7 @@ public class Engine {
                 break;
             }
         }
-        if (countOfCorrectAnswers == 3) {
+        if (countOfCorrectAnswers == NUMBERS_OF_GAMES) {
             System.out.println("Congratulations, " + userName + "!");
         }
     }
