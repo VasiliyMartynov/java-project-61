@@ -16,7 +16,7 @@ public class Progression {
     }
     static int[] getRandomProgression() {
         var maxProgressionLength = 10;
-        var minProgressionLength = 5;
+        var minProgressionLength = 6;
         var firstItem = Engine.getRandomNumberFromRange(0, 10);
         var stepOfProgression = Engine.getRandomNumberFromRange(1, 10);
         int randomProgressionLength = Engine.getRandomNumberFromRange(minProgressionLength, maxProgressionLength);
