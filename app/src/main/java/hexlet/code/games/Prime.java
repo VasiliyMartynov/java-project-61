@@ -22,14 +22,26 @@ public class Prime {
     }
 
     public static String isPrime(int number) {
-        int num;
-        for (int i = 2; i <= number / 2; i++) {
-            num = number % i;
-            if (num == 0) {
-                return "no";
+        var i = 0;
+        var m = 0;
+        int flag = 0;
+        String result = "";
+        m = number / 2;
+        if (number == 0 || number == 1) {
+            result = "no";
+        } else {
+            for (i = 2; i <= m; i++) {
+                if (number % i == 0) {
+                    result = "no";
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0) {
+                result = "yes";
             }
         }
-        return "yes";
-
+        return  result;
     }
 }
+
