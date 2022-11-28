@@ -7,19 +7,19 @@ import hexlet.code.Utils;
 public class Progression {
     private static final int MAX_PROGRESSION_LENGTH = 10;
     private static final int MIN_PROGRESSION_LENGTH = 6;
+    private static final String RULES = "What number is missing in the progression?";
 
     public static void start() {
-        Engine.startEngine(sendRules(), sendGameData());
-    }
-
-    public static String sendRules() {
-        return "What number is missing in the progression?";
+        Engine.startEngine(RULES, sendGameData());
     }
 
     public static String[][] sendGameData() { //[0] - question, [length-1] - answer
         String[][] gameData = new String[Settings.NUMBERS_OF_GAMES][2];
         for (int i = 0; i < gameData.length; i++) {
-            int[] progression = getRandomProgression();
+            var firstItem = Utils.getRandomNumberFromRange(0, MAX_PROGRESSION_LENGTH);
+            var stepOfProgression = Utils.getRandomNumberFromRange(1, MAX_PROGRESSION_LENGTH);
+            var progressionLength = Utils.getRandomNumberFromRange(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH);
+            int[] progression = getRandomProgression(firstItem, stepOfProgression, progressionLength);
             int randomProgressionIndex = Utils.getRandomNumberFromRange(1, progression.length - 2);
             gameData[i][0] = getQuestion(progression, randomProgressionIndex);
             gameData[i][1] = Integer.toString(progression[randomProgressionIndex]);
@@ -27,13 +27,10 @@ public class Progression {
         return gameData;
     }
 
-    static int[] getRandomProgression() {
-        final int firstItem = Utils.getRandomNumberFromRange(0, MAX_PROGRESSION_LENGTH);
-        var stepOfProgression = Utils.getRandomNumberFromRange(1, MAX_PROGRESSION_LENGTH);
-        int randomProgressionLength = Utils.getRandomNumberFromRange(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH);
-        int[] randomProgression = new int[randomProgressionLength];
+    static int[] getRandomProgression(int firstItem, int stepOfProgression, int progressionLength) {
+        int[] randomProgression = new int[progressionLength];
         randomProgression[0] = firstItem;
-        for (int i = 0; i < randomProgressionLength - 1; i++) {
+        for (int i = 0; i < progressionLength - 1; i++) {
             randomProgression[i + 1] = randomProgression[i] + stepOfProgression;
         }
         return randomProgression;

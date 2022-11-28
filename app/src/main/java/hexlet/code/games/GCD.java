@@ -5,12 +5,10 @@ import hexlet.code.Settings;
 import hexlet.code.Utils;
 
 public class GCD {
-    public static void start() {
-        Engine.startEngine(sendRules(), sendGameData());
-    }
+    private static final String RULES = "Find the greatest common divisor of given numbers.";
 
-    public static String sendRules() {
-        return "Find the greatest common divisor of given numbers.";
+    public static void start() {
+        Engine.startEngine(RULES, sendGameData());
     }
 
     public static String[][] sendGameData() { //[0] - question, [length-1] - answer

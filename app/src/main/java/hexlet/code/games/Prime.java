@@ -5,12 +5,10 @@ import hexlet.code.Settings;
 import hexlet.code.Utils;
 
 public class Prime {
-    public static void start() {
-        Engine.startEngine(sendRules(), sendGameData());
-    }
+    private static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-    public static String sendRules() {
-        return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    public static void start() {
+        Engine.startEngine(RULES, sendGameData());
     }
 
     public static String[][] sendGameData() { //[0] - question, [length-1] - answer
