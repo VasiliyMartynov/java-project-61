@@ -17,7 +17,7 @@ public class Calc {
             int randomNumber1 = Utils.getRandomNumberFromRange();
             int randomNumber2 = Utils.getRandomNumberFromRange();
             char[] operations = {'*', '+', '-'};
-            char randomOperation = operations[Utils.getRandomNumberFromRange(0, 2)];
+            char randomOperation = operations[Utils.getRandomNumberFromRange(0, operations.length)];
             var answer = showCalculatedString(randomOperation, randomNumber1, randomNumber2);
             gameData[i][0] = randomNumber1 + " " + randomOperation + " " + randomNumber2;
             gameData[i][1] = answer;

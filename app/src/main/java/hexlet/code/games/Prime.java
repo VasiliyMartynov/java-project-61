@@ -16,29 +16,33 @@ public class Prime {
         for (int i = 0; i < gameData.length; i++) {
             int randomNumber1 = Utils.getRandomNumberFromRange();
             gameData[i][0] = Integer.toString(randomNumber1);
-            gameData[i][1] = isPrime(randomNumber1);
+            if (isPrime(randomNumber1)) {
+                gameData[i][1] = "yes";
+            } else {
+                gameData[i][1] = "no";
+            }
         }
         return gameData;
     }
 
-    public static String isPrime(int number) {
+    public static Boolean isPrime(int number) {
         var i = 0;
         var m = 0;
         int flag = 0;
-        String result = "";
+        Boolean result = false;
         m = number / 2;
         if (number == 0 || number == 1) {
-            result = "no";
+            result = false;
         } else {
             for (i = 2; i <= m; i++) {
                 if (number % i == 0) {
-                    result = "no";
+                    result = false;
                     flag = 1;
                     break;
                 }
             }
             if (flag == 0) {
-                result = "yes";
+                result = true;
             }
         }
         return  result;

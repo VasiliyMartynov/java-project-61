@@ -16,13 +16,20 @@ public class Even {
         for (int i = 0; i < gameData.length; i++) {
             int randomNumber = Utils.getRandomNumberFromRange();
             gameData[i][0] = String.valueOf(randomNumber);
-            if (Integer.parseInt(gameData[i][0]) % 2 == 0) {
+            int number = Integer.parseInt(gameData[i][0]);
+            if (isNumbersEven(number)) {
                 gameData[i][1] = "yes";
             } else {
                 gameData[i][1] = "no";
             }
         }
         return gameData;
+    }
+    public static Boolean isNumbersEven(int number) {
+        if (number % 2 == 0) {
+            return true;
+        }
+        return false;
     }
 
 
