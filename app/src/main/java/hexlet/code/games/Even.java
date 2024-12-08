@@ -4,6 +4,12 @@ import hexlet.code.Engine;
 import hexlet.code.Settings;
 import hexlet.code.Utils;
 
+/**
+ * Игра: "Проверка на чётность"
+ * пользователю показывается случайное число. И ему нужно ответить yes,
+ * если число чётное, или no — если нечётное:
+ */
+
 public class Even {
     private static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 

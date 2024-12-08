@@ -13,6 +13,15 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
     }
 
+    /**
+     * @param gameRules just simple string with game rules
+     * @param gameData 2D array count of rows is number of games
+     *                 1st column question data, 2nd column answer
+     *
+     * @return zero
+     *
+     * engine are comparing  user input with gameData answer column
+     */
     public static int startEngine(String gameRules, String[][] gameData) {
         greetings();
         System.out.println(gameRules);

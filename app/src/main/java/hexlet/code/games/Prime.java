@@ -4,6 +4,12 @@ import hexlet.code.Engine;
 import hexlet.code.Settings;
 import hexlet.code.Utils;
 
+/**
+ * Игра "Простое ли число?".
+ * В данной игре необходимо определить является ли число простым или нет
+ * Простое число - натуральное (целое положительное) число,
+ * имеющее ровно два различных натуральных делителя — единицу и самого себя
+ */
 public class Prime {
     private static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 

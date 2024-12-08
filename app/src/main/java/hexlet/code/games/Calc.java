@@ -4,6 +4,11 @@ import hexlet.code.Engine;
 import hexlet.code.Settings;
 import hexlet.code.Utils;
 
+/**
+ * Игра: "Калькулятор"
+ * пользователю показывается случайное математическое выражение,
+ * например 35 + 16, которое нужно вычислить и записать правильный ответ.
+ */
 public class Calc {
     private static final String RULES = "What is the result of the expression?";
 

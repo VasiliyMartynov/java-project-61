@@ -4,6 +4,15 @@ import hexlet.code.Engine;
 import hexlet.code.Settings;
 import hexlet.code.Utils;
 
+/**
+ * Игра "Арифметическая прогрессия"
+ * Показываем игроку ряд чисел, образующий арифметическую прогрессию,
+ * заменив любое из чисел двумя точками. Игрок должен определить это число.
+ * Рекомендуемая длина прогрессии – 10 чисел. Длина может генерироваться
+ * случайным образом, но должна содержать не менее 5-ти чисел!
+ * Позиция спрятанного элемента каждый раз изменяется (выбирается случайным образом).
+ */
+
 public class Progression {
     private static final int MAX_PROGRESSION_LENGTH = 10;
     private static final int MIN_PROGRESSION_LENGTH = 6;

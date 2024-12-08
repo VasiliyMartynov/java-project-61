@@ -4,6 +4,11 @@ import hexlet.code.Engine;
 import hexlet.code.Settings;
 import hexlet.code.Utils;
 
+/**
+ * Игра "НОД"
+ * пользователю показывается два случайных числа, например, 25 50.
+ * Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
+ */
 public class GCD {
     private static final String RULES = "Find the greatest common divisor of given numbers.";
 
